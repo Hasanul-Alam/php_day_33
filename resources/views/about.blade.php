@@ -1,6 +1,18 @@
-<a href="{{route('home')}}">Home</a>||
-<a href="{{route('about')}}">About</a>||
-<a href="{{route('contact')}}">Contact</a>
+@extends('master')
+@section('title')
+    About Page
+@endsection
 
-<h1>This is about page.</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci architecto delectus deleniti dicta, doloremque ex excepturi explicabo harum inventore iure magni natus odit officiis quae quibusdam sequi ullam voluptatum.</p>
+@section('body')
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="card card-body bg-success">
+                        <h1 class="text-center">This is about page..</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection

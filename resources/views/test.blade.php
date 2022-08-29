@@ -1,7 +1,19 @@
-<a href="{{route('home')}}">Home</a>||
-<a href="{{route('about')}}">About</a>||
-<a href="{{route('contact')}}">Contact</a>
+@extends('master')
 
-<h1>Hello Laravel</h1>
+@section('title')
+    Home Page
+@endsection
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam debitis dolorum ducimus earum eos et eum excepturi exercitationem illum natus nemo quasi quibusdam quidem quisquam repellat, sit tenetur voluptatum!</p>
+@section('body')
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="card card-body bg-warning">
+                        <h1 class="text-center">This is home page..</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection
