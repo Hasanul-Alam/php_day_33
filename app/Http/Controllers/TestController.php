@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class TestController extends Controller
 {
     private $students;
+    private $product;
     public function index()
     {
         $this->students = Student::getAllStudent();
@@ -25,5 +26,11 @@ class TestController extends Controller
     public function contact()
     {
         return view('contact');
+    }
+
+    public function detail($id)
+    {
+        $this->product = Product::getProductById($id);
+        return view('product-detail', ['product' => $this->product]);
     }
 }

@@ -13,9 +13,9 @@
                         <img src="{{asset('/')}}img/{{$product['image']}}" alt="" height="200">
                         <div class="card-body">
                             <h4>{{$product['name']}}</h4>
-                            <p>{{$product['price']}}</p>
+                            <p>Tk. {{$product['price']}}</p>
                             <hr>
-                            <a href="" class="btn btn-outline-success">Detail</a>
+                            <a href="{{route('product-detail', ['id' => $product['id']])}}" class="btn btn-outline-success">Detail</a>
                         </div>
                     </div>
                 </div>

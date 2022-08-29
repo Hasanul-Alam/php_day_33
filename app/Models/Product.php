@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use function Symfony\Component\ErrorHandler\setLoggers;
 
 class Product extends Model
 {
     use HasFactory;
+    public static $products;
 
     public static function getAllProduct()
     {
@@ -37,5 +39,17 @@ class Product extends Model
                 'image' => 'product7.png'
             ],
         ];
+    }
+
+    public static function getProductById($id)
+    {
+        self::$products = self::getAllProduct();
+        foreach (self::$products as $product)
+        {
+            if($product['id'] == $id)
+            {
+                return $product;
+            }
+        }
     }
 }

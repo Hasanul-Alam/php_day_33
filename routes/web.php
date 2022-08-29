@@ -17,3 +17,4 @@ use App\Http\Controllers\TestController;
 Route::get('/', [TestController::class, 'index'])->name('home');
 Route::get('/about', [TestController::class, 'about'])->name('about');
 Route::get('/contact', [TestController::class, 'contact'])->name('contact');
+Route::get('/product-detail/{id}', [TestController::class, 'detail'])->name('product-detail');
