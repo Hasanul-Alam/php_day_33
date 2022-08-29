@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -14,9 +15,11 @@ class TestController extends Controller
         return view('test', ['students' => $this->students]);
     }
 
+    private $products;
     public function about()
     {
-        return view('about');
+        $this->products = Product::getAllProduct();
+        return view('about', ['products' => $this->products]);
     }
 
     public function contact()
