@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
+    private $students;
     public function index()
     {
-        return view('test');
+        $this->students = Student::getAllStudent();
+        return view('test', ['students' => $this->students]);
     }
 
     public function about()
