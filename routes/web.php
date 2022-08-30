@@ -18,3 +18,7 @@ Route::get('/', [TestController::class, 'index'])->name('home');
 Route::get('/about', [TestController::class, 'about'])->name('about');
 Route::get('/contact', [TestController::class, 'contact'])->name('contact');
 Route::get('/product-detail/{id}', [TestController::class, 'detail'])->name('product-detail');
+Route::post('/full-name', [TestController::class, 'fullName'])->name('full-name');
+Route::get('/series', [TestController::class, 'series'])->name('series');
+Route::post('/newSeries', [TestController::class, 'newSeries'])->name('newSeries');
+Route::get('/calculator', [TestController::class, 'calculator'])->name('calculator');

@@ -8,10 +8,18 @@
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 mx-auto">
+                <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            {{$product['name']}}
+                            <img src="{{$product['image']}}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>{{$product['name']}}</h2>
+                            <h4>Tk. {{$product['price']}}</h4>
                         </div>
                     </div>
                 </div>

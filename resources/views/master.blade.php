@@ -18,6 +18,8 @@
             <li><a href="{{route('home')}}" class="nav-link">Home</a></li>
             <li><a href="{{route('about')}}" class="nav-link">About</a></li>
             <li><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
+            <li><a href="{{route('series')}}" class="nav-link">Series</a></li>
+            <li><a href="{{route('calculator')}}" class="nav-link">Calculator</a></li>
         </ul>
     </div>
 </nav>
